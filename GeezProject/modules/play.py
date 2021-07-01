@@ -607,9 +607,9 @@ async def play(_, message: Message):
 
             while j < 5:
                 toxxt += f"{emojilist[j]} [{results[j]['title']}](https://youtube.com{results[j]['url_suffix']})\n"
-                toxxt += f" ╠»**Duration** - {results[j]['duration']}\n"
-                toxxt += f" ╠»**Views** - {results[j]['views']}\n"
-                toxxt += f" ╚»**Channel** - {results[j]['channel']}\n\n"
+                toxxt += f" ╔**Duration** - {results[j]['duration']}\n"
+                toxxt += f" ╠**Views** - {results[j]['views']}\n"
+                toxxt += f" ╚**Channel** - {results[j]['channel']}\n\n"
 
                 j += 1            
             koyboard = InlineKeyboardMarkup(
@@ -623,7 +623,7 @@ async def play(_, message: Message):
                         InlineKeyboardButton("『4』", callback_data=f'plll 3|{query}|{user_id}'),
                         InlineKeyboardButton("『5』", callback_data=f'plll 4|{query}|{user_id}'),
                     ],
-                    [InlineKeyboardButton(text="『CLOSE』", callback_data="cls")],
+                    [InlineKeyboardButton(text="『CLOSE BABY』", callback_data="cls")],
                 ]
             )       
             await lel.edit(toxxt,reply_markup=koyboard,disable_web_page_preview=True)
@@ -814,8 +814,8 @@ async def ytplay(_, message: Message):
         qeue.append(appendable)
         await message.reply_photo(
             photo="final.png",
-            caption = f"🛰️ **Judul:** [{title[:60]}]({url})\n⏱ **Durasi:** {duration}\n💡 **Status:** Antrian Ke `{position}`\n" \
-                    + f"🎼 **Request Dari:** {message.from_user.mention}",
+            caption = f"➠ **Judul:** [{title[:60]}]({url})\n➠ **Durasi:** {duration}\n➠ **Status:** Antrian Ke `{position}`\n" \
+                    + f"➠ **Request Dari:** {message.from_user.mention}",
                    reply_markup=keyboard,
         )
         os.remove("final.png")
@@ -836,8 +836,8 @@ async def ytplay(_, message: Message):
             return
         await message.reply_photo(
             photo="final.png",
-            caption = f"🛰️ **Judul:** [{title[:60]}]({url})\n⏱ **Durasi:** {duration}\n💡 **Status:** Sedang Memutar\n" \
-                    + f"🎼 **Request Dari:** {message.from_user.mention}",
+            caption = f"➠ **Judul:** [{title[:60]}]({url})\n➠ **Durasi:** {duration}\n➠ **Status:** Sedang Memutar\n" \
+                    + f"➠ **Request Dari:** {message.from_user.mention}",
                    reply_markup=keyboard,)
         os.remove("final.png")
         return await lel.delete()
@@ -1047,8 +1047,8 @@ async def lol_cb(b, cb):
         await cb.message.delete()
         await b.send_photo(chat_id,
             photo="final.png",
-            caption = f"🛰️ **Judul:** [{title[:60]}]({url})\n⏱ **Durasi:** {duration}\n💡 **Status:** Antrian Ke `{position}`\n" \
-                    + f"🎼 **Request Dari:** {r_by.mention}",
+            caption = f"❖ **Judul:** [{title[:60]}]({url})\n❖ **Durasi:** {duration}\n❖ **Status:** Antrian Ke `{position}`\n" \
+                    + f"❖ **Request Dari:** {r_by.mention}",
                    reply_markup=keyboard,
         )
         os.remove("final.png")
