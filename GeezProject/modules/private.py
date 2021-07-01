@@ -56,7 +56,7 @@ Ingin Menambahkan Saya ke Grup Anda? Tambahkan Saya Ke Group Anda!
                         "🎈 Group Support", url=f"https://t.me/{SUPPORT_GROUP}")
                 ],[
                     InlineKeyboardButton(
-                        "🛠 Source Code 🛠", url=f"https://{SOURCE_CODE}")
+                        "📸 Owner", url=f"https://t.me/XFLSkyzo")
                 ],[
                     InlineKeyboardButton(
                         "🎁 Donate", url=f"https://t.me/XFLSkyzo")
