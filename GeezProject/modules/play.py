@@ -530,8 +530,8 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("📌 Groups", url="https://t.me/GeezSupportGroup"),
-                    InlineKeyboardButton("⛑ Channel", url="https://t.me/GeezProjets"),
+                    InlineKeyboardButton("📌 Groups", url="https://t.me/SadRoomsChat"),
+                    InlineKeyboardButton("📸 Channel", url="https://t.me/SadRoomsInfo"),
                 ],
                 [InlineKeyboardButton(text="🗑 Close", callback_data="cls")],
             ]
@@ -577,8 +577,8 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("📌 Groups", url="https://t.me/GeezSupportGroup"),
-                    InlineKeyboardButton("⛑ Channel", url="https://t.me/GeezProjects"),
+                    InlineKeyboardButton("📌 Groups", url="https://t.me/SadRoomsChat"),
+                    InlineKeyboardButton("📸 Channel", url="https://t.me/SadRoomsInfo"),
                 ],
                 [InlineKeyboardButton(text="🗑 Close", callback_data="cls")],
             ]
@@ -603,27 +603,27 @@ async def play(_, message: Message):
             toxxt = "**Silahkan Pilih lagu yang ingin Anda Putar:**\n\n"
             j = 0
             useer=user_name
-            emojilist = ["1️⃣","2️⃣","3️⃣","4️⃣","5️⃣",]
+            emojilist = ["『1』","『2』","『3』","『4』","『5』",]
 
             while j < 5:
                 toxxt += f"{emojilist[j]} [{results[j]['title']}](https://youtube.com{results[j]['url_suffix']})\n"
-                toxxt += f" ├ **Duration** - {results[j]['duration']}\n"
-                toxxt += f" ├ **Views** - {results[j]['views']}\n"
-                toxxt += f" └ **Channel** - {results[j]['channel']}\n\n"
+                toxxt += f" ╠»**Duration** - {results[j]['duration']}\n"
+                toxxt += f" ╠»**Views** - {results[j]['views']}\n"
+                toxxt += f" ╚»**Channel** - {results[j]['channel']}\n\n"
 
                 j += 1            
             koyboard = InlineKeyboardMarkup(
                 [
                     [
-                        InlineKeyboardButton("1️⃣", callback_data=f'plll 0|{query}|{user_id}'),
-                        InlineKeyboardButton("2️⃣", callback_data=f'plll 1|{query}|{user_id}'),
-                        InlineKeyboardButton("3️⃣", callback_data=f'plll 2|{query}|{user_id}'),
+                        InlineKeyboardButton("『1』", callback_data=f'plll 0|{query}|{user_id}'),
+                        InlineKeyboardButton("『2』", callback_data=f'plll 1|{query}|{user_id}'),
+                        InlineKeyboardButton("『3』", callback_data=f'plll 2|{query}|{user_id}'),
                     ],
                     [
-                        InlineKeyboardButton("4️⃣", callback_data=f'plll 3|{query}|{user_id}'),
-                        InlineKeyboardButton("5️⃣", callback_data=f'plll 4|{query}|{user_id}'),
+                        InlineKeyboardButton("『4』", callback_data=f'plll 3|{query}|{user_id}'),
+                        InlineKeyboardButton("『5』", callback_data=f'plll 4|{query}|{user_id}'),
                     ],
-                    [InlineKeyboardButton(text="🗑 Close", callback_data="cls")],
+                    [InlineKeyboardButton(text="『CLOSE』", callback_data="cls")],
                 ]
             )       
             await lel.edit(toxxt,reply_markup=koyboard,disable_web_page_preview=True)
@@ -656,8 +656,8 @@ async def play(_, message: Message):
             keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("📌 Groups", url="https://t.me/GeezSupportGroup"),
-                    InlineKeyboardButton("⛑ Channel", url="https://t.me/GeezProjects"),
+                    InlineKeyboardButton("📌 Groups", url="https://t.me/SadRoomsChat"),
+                    InlineKeyboardButton("📸 Channel", url="https://t.me/SadRoomsInfo"),
                 ],
                 [InlineKeyboardButton(text="🗑 Close", callback_data="cls")],
             ]
@@ -676,7 +676,7 @@ async def play(_, message: Message):
         qeue.append(appendable)
         await message.reply_photo(
             photo="final.png",
-            caption = f"🏷 **Judul:** [{title[:60]}]({url})\n⏱ **Durasi:** {duration}\n💡 **Status:** Antrian Ke `{position}`\n" \
+            caption = f",📸 **Judul:** [{title[:60]}]({url})\n⏱ **Durasi:** {duration}\n💡 **Status:** Antrian Ke `{position}`\n" \
                     + f"🎼 **Request Dari:** {message.from_user.mention}",
                    reply_markup=keyboard)
     else:
@@ -695,7 +695,7 @@ async def play(_, message: Message):
             return
         await message.reply_photo(
             photo="final.png",
-            caption = f"🏷 **Judul:** [{title[:60]}]({url})\n⏱ **Durasi:** {duration}\n💡 **Status:** Sedang Memutar\n" \
+            caption = f"📸 **Judul:** [{title[:60]}]({url})\n⏱ **Durasi:** {duration}\n💡 **Status:** Sedang Memutar\n" \
                     + f"🎼 **Request Dari:** {message.from_user.mention}",
                    reply_markup=keyboard)
 
@@ -794,8 +794,8 @@ async def ytplay(_, message: Message):
     keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("📌 Groups", url="https://t.me/GeezSupportGroup"),
-                    InlineKeyboardButton("⛑ Channel", url="https://t.me/GeezProjects"),
+                    InlineKeyboardButton("📌 Groups", url="https://t.me/SadRoomsChat"),
+                    InlineKeyboardButton("📸 Channel", url="https://t.me/SadRoomsInfo"),
                 ],
                 [InlineKeyboardButton(text="🗑 Close", callback_data="cls")],
             ]
@@ -814,7 +814,7 @@ async def ytplay(_, message: Message):
         qeue.append(appendable)
         await message.reply_photo(
             photo="final.png",
-            caption = f"🏷 **Judul:** [{title[:60]}]({url})\n⏱ **Durasi:** {duration}\n💡 **Status:** Antrian Ke `{position}`\n" \
+            caption = f"🛰️ **Judul:** [{title[:60]}]({url})\n⏱ **Durasi:** {duration}\n💡 **Status:** Antrian Ke `{position}`\n" \
                     + f"🎼 **Request Dari:** {message.from_user.mention}",
                    reply_markup=keyboard,
         )
@@ -836,7 +836,7 @@ async def ytplay(_, message: Message):
             return
         await message.reply_photo(
             photo="final.png",
-            caption = f"🏷 **Judul:** [{title[:60]}]({url})\n⏱ **Durasi:** {duration}\n💡 **Status:** Sedang Memutar\n" \
+            caption = f"🛰️ **Judul:** [{title[:60]}]({url})\n⏱ **Durasi:** {duration}\n💡 **Status:** Sedang Memutar\n" \
                     + f"🎼 **Request Dari:** {message.from_user.mention}",
                    reply_markup=keyboard,)
         os.remove("final.png")
@@ -1024,8 +1024,8 @@ async def lol_cb(b, cb):
     keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("📌 Groups", url="https://t.me/GeezSupportGroup"),
-                    InlineKeyboardButton("🛡️ Channel", url="https://t.me/GeezProjects"),
+                    InlineKeyboardButton("🛰️ Groups", url="https://t.me/SadRoomsChat"),
+                    InlineKeyboardButton("📸 Channel", url="https://t.me/SadRoomsInfo"),
                 ],
                 [InlineKeyboardButton(text="🗑 Close", callback_data="cls")],
             ]
@@ -1047,7 +1047,7 @@ async def lol_cb(b, cb):
         await cb.message.delete()
         await b.send_photo(chat_id,
             photo="final.png",
-            caption = f"🏷 **Judul:** [{title[:60]}]({url})\n⏱ **Durasi:** {duration}\n💡 **Status:** Antrian Ke `{position}`\n" \
+            caption = f"🛰️ **Judul:** [{title[:60]}]({url})\n⏱ **Durasi:** {duration}\n💡 **Status:** Antrian Ke `{position}`\n" \
                     + f"🎼 **Request Dari:** {r_by.mention}",
                    reply_markup=keyboard,
         )
@@ -1069,7 +1069,7 @@ async def lol_cb(b, cb):
         await cb.message.delete()
         await b.send_photo(chat_id,
             photo="final.png",
-            caption = f"🏷 **Judul:** [{title[:60]}]({url})\n⏱ **Durasi:** {duration}\n💡 **Status:** Sedang Memutar\n" \
+            caption = f"🛰️ **Judul:** [{title[:60]}]({url})\n⏱ **Durasi:** {duration}\n💡 **Status:** Sedang Memutar\n" \
                     + f"🎼 **Request Dari:** {r_by.mention}",
                     reply_markup=keyboard,
         )
