@@ -1069,7 +1069,7 @@ async def lol_cb(b, cb):
         await cb.message.delete()
         await b.send_photo(chat_id,
             photo="final.png",
-            caption = f"➠ **Judul:** [{title[:60]}]({url})\n➠ **Durasi:** {duration}\n💡 **Status:** Sedang Memutar\n" \
+            caption = f"➠ **Judul:** [{title[:60]}]({url})\n➠ **Durasi:** {duration}\n➠ **Status:** Sedang Memutar\n" \
                     + f"➠ **Request Dari:** {r_by.mention}",
                     reply_markup=keyboard,
         )
