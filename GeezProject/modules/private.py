@@ -31,14 +31,16 @@ async def start_(client: Client, message: Message):
         f"""<b>Haii {message.from_user.first_name} saya adalah {PROJECT_NAME}\n
 Saya Adalah Bot Music Group, Yang dapat Memutar Lagu di Voice Chat Group Anda Dengan Mudah
 Saya Memiliki Banyak Fitur Seperti :
-• Memutar Musik.
-• Mendownload Lagu.
-• Mencari Lagu Yang ingin di Putar atau di Download.
-• Gunakan Perintah » /help « untuk Mengetahui Fitur Lengkapnya
+➠ Memutar Musik.
+➠ Mendownload Lagu.
+➠ Mencari Lagu.
+➠ Mendownload Lagu.
+➠ Tekan » /help « Untuk Fitur Lainnya.
 
-📌 Special Thanks To : {OWNER}
+🎉 Thanks To : {OWNER}
+🎊 And Support : @GcSerendipity
 
-Ingin Menambahkan Saya ke Grup Anda? Tambahkan Saya Ke Group Anda!
+Ingin Menambahkan Saya Ke Grup Anda? Tambahkan Saya Ke Group Anda!
 </b>""",
 
 # Edit Yang Seharusnya Lu Edit Aja:D
@@ -48,18 +50,18 @@ Ingin Menambahkan Saya ke Grup Anda? Tambahkan Saya Ke Group Anda!
             [
                 [
                     InlineKeyboardButton(
-                        "🔰 Tambahkan saya ke Grup Anda 🔰", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")],
+                        "⭐ Tambahkan Saya Ke Grup ⭐", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")],
                 [
                     InlineKeyboardButton(
-                        "💬 Channel Updates", url=f"https://t.me/{UPDATES_CHANNEL}"), 
+                        "🛍️ Channel Updates", url=f"https://t.me/{UPDATES_CHANNEL}"), 
                     InlineKeyboardButton(
-                        "🎈 Group Support", url=f"https://t.me/{SUPPORT_GROUP}")
+                        "🎊 Groups 1", url=f"https://t.me/{SUPPORT_GROUP}")
                 ],[
                     InlineKeyboardButton(
-                        "📸 Owner", url=f"https://t.me/XFLSkyzo")
+                        "🐉 Owner Bot", url=f"https://t.me/XFLSkyzo")
                 ],[
                     InlineKeyboardButton(
-                        "🎁 Donate", url=f"https://t.me/XFLSkyzo")
+                        "🎍 Groups 2", url=f"https://t.me/XFLSkyzo")
                 ]
             ]
         ),
@@ -93,15 +95,15 @@ def help_answer(client, callback_query):
 def map(pos):
     if(pos==1):
         button = [
-            [InlineKeyboardButton(text = 'Next »', callback_data = "help+2")]
+            [InlineKeyboardButton(text = '➠', callback_data = "help+2")]
         ]
     elif(pos==len(tr.HELP_MSG)-1):
         url = f"https://t.me/{SUPPORT_GROUP}"
         button = [
-            [InlineKeyboardButton("🔰 Tambahkan saya ke Grup Anda 🔰", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")],
-            [InlineKeyboardButton(text = '💬 Channel Updates', url=f"https://t.me/{UPDATES_CHANNEL}"),
-             InlineKeyboardButton(text = '📸 Group Support', url=f"https://t.me/{SUPPORT_GROUP}")],
-            [InlineKeyboardButton(text = '🛠 Source Code 🛠', url=f"https://{SOURCE_CODE}")],
+            [InlineKeyboardButton("⭐ Tambahkan Saya Ke Grup ⭐", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")],
+            [InlineKeyboardButton(text = '🛍️ Channel Updates', url=f"https://t.me/{UPDATES_CHANNEL}"),
+             InlineKeyboardButton(text = '📸 Group 1', url=f"https://t.me/{SUPPORT_GROUP}")],
+            [InlineKeyboardButton(text = '🎍 Group 2', url=f"https://t.me/gcserendipity")],
             [InlineKeyboardButton(text = '«', callback_data = f"help+{pos-1}")]
         ]
     else:
@@ -121,7 +123,7 @@ def map(pos):
 )
 async def start(client: Client, message: Message):
     await message.reply_text(
-        "💁🏻‍♂️ **Apakah Anda ingin mencari Link YouTube?**",
+        "💁🏻‍♂️ **Apakah Anda Ingin Mencari Link YouTube?**",
         reply_markup=InlineKeyboardMarkup(
             [   
                 [    
