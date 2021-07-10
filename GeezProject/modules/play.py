@@ -600,16 +600,16 @@ async def play(_, message: Message):
           await lel.edit("**Beri Judul Lagu untuk diputar**")
         # Looks like hell. Aren't it?? FUCK OFF
         try:
-            toxxt = "**Silahkan Pilih lagu yang ingin Anda Putar:**\n\n"
+            toxxt = "**Silahkan Pilih Lagu Yang Ingin Anda Putar: **\n\n"
             j = 0
             useer=user_name
             emojilist = ["『1』","『2』","『3』","『4』","『5』",]
 
             while j < 5:
                 toxxt += f"{emojilist[j]} [{results[j]['title']}](https://youtube.com{results[j]['url_suffix']})\n"
-                toxxt += f" ╔**Duration** - {results[j]['duration']}\n"
-                toxxt += f" ╠**Views** - {results[j]['views']}\n"
-                toxxt += f" ╚**Channel** - {results[j]['channel']}\n\n"
+                toxxt += f" **╠ ◈Duration** - {results[j]['duration']}\n"
+                toxxt += f" **╠ ◈Views** - {results[j]['views']}\n"
+                toxxt += f" **╚ ◈Channel** - {results[j]['channel']}\n\n"
 
                 j += 1            
             koyboard = InlineKeyboardMarkup(
@@ -623,7 +623,7 @@ async def play(_, message: Message):
                         InlineKeyboardButton("『4』", callback_data=f'plll 3|{query}|{user_id}'),
                         InlineKeyboardButton("『5』", callback_data=f'plll 4|{query}|{user_id}'),
                     ],
-                    [InlineKeyboardButton(text="『CLOSE BABY』", callback_data="cls")],
+                    [InlineKeyboardButton(text="『CLOSE』", callback_data="cls")],
                 ]
             )       
             await lel.edit(toxxt,reply_markup=koyboard,disable_web_page_preview=True)
@@ -676,8 +676,8 @@ async def play(_, message: Message):
         qeue.append(appendable)
         await message.reply_photo(
             photo="final.png",
-            caption = f",📸 **Judul:** [{title[:60]}]({url})\n⏱ **Durasi:** {duration}\n💡 **Status:** Antrian Ke `{position}`\n" \
-                    + f"🎼 **Request Dari:** {message.from_user.mention}",
+            caption = f"◈ **Judul:** [{title[:60]}]({url})\n⏱ **Durasi:** {duration}\n◈ **Status:** Antrian Ke `{position}`\n" \
+                    + f"◈ **Request Dari:** {message.from_user.mention}",
                    reply_markup=keyboard)
     else:
         chat_id = get_chat_id(message.chat)
@@ -695,8 +695,8 @@ async def play(_, message: Message):
             return
         await message.reply_photo(
             photo="final.png",
-            caption = f"📸 **Judul:** [{title[:60]}]({url})\n⏱ **Durasi:** {duration}\n💡 **Status:** Sedang Memutar\n" \
-                    + f"🎼 **Request Dari:** {message.from_user.mention}",
+            caption = f"◈ **Judul:** [{title[:60]}]({url})\n⏱ **Durasi:** {duration}\n◈ **Status:** Sedang Memutar\n" \
+                    + f"◈ **Request Dari:** {message.from_user.mention}",
                    reply_markup=keyboard)
 
     os.remove("final.png")
@@ -945,9 +945,9 @@ async def deezer(client: Client, message_: Message):
         loc = file_path
         appendable = [s_name, r_by, loc]
         qeue.append(appendable)
-        await res.edit_text(f"🎼 **Lagu yang Anda minta Sedang Antri di posisi** `{position}`")
+        await res.edit_text(f"◈ **Lagu yang Anda minta Sedang Antri di posisi** `{position}`")
     else:
-        await res.edit_text(f"🎼️ **Playing...**")
+        await res.edit_text(f" **Playing...**")
 
         que[chat_id] = []
         qeue = que.get(chat_id)
@@ -1069,8 +1069,8 @@ async def lol_cb(b, cb):
         await cb.message.delete()
         await b.send_photo(chat_id,
             photo="final.png",
-            caption = f"🛰️ **Judul:** [{title[:60]}]({url})\n⏱ **Durasi:** {duration}\n💡 **Status:** Sedang Memutar\n" \
-                    + f"🎼 **Request Dari:** {r_by.mention}",
+            caption = f"➠ **Judul:** [{title[:60]}]({url})\n➠ **Durasi:** {duration}\n💡 **Status:** Sedang Memutar\n" \
+                    + f"➠ **Request Dari:** {r_by.mention}",
                     reply_markup=keyboard,
         )
         os.remove("final.png")
