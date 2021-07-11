@@ -55,13 +55,13 @@ Ingin Menambahkan Saya Ke Grup Anda? Tambahkan Saya Ke Group Anda!
                     InlineKeyboardButton(
                         "🛍️ Channel Updates", url=f"https://t.me/{UPDATES_CHANNEL}"), 
                     InlineKeyboardButton(
-                        "🎊 Groups 1", url=f"https://t.me/{SUPPORT_GROUP}")
+                        "🎊 Groups Support", url=f"https://t.me/{SUPPORT_GROUP}")
                 ],[
                     InlineKeyboardButton(
-                        "🐉 Owner Bot", url=f"https://t.me/XFLSkyzo")
+                        "❖ Owner Bot ❖", url=f"https://t.me/XFLSkyzo")
                 ],[
                     InlineKeyboardButton(
-                        "🎍 Groups 2", url=f"https://t.me/XFLSkyzo")
+                        "🎍 Groups Promote 🎍", url=f"https://t.me/Gcserendipity")
                 ]
             ]
         ),
@@ -102,8 +102,8 @@ def map(pos):
         button = [
             [InlineKeyboardButton("⭐ Tambahkan Saya Ke Grup ⭐", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")],
             [InlineKeyboardButton(text = '🛍️ Channel Updates', url=f"https://t.me/{UPDATES_CHANNEL}"),
-             InlineKeyboardButton(text = '📸 Group 1', url=f"https://t.me/{SUPPORT_GROUP}")],
-            [InlineKeyboardButton(text = '🎍 Group 2', url=f"https://t.me/gcserendipity")],
+             InlineKeyboardButton(text = '📸 Group Support', url=f"https://t.me/{SUPPORT_GROUP}")],
+            [InlineKeyboardButton(text = '🎍 Group Promote', url=f"https://t.me/gcserendipity")],
             [InlineKeyboardButton(text = '«', callback_data = f"help+{pos-1}")]
         ]
     else:
@@ -151,7 +151,7 @@ async def help(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "📜 Cara Menggunakan BOT 📜", url="https://t.me/sadroomsinfo/52"
+                        "❖ Cara Menggunakan Bot ❖", url="https://t.me/sadroomsinfo/52"
                     )
                 ]
             ]
@@ -165,12 +165,12 @@ async def help(client: Client, message: Message):
     & ~ filters.edited
 )
 async def reload(client: Client, message: Message):
-    await message.reply_text("""✅ Bot **berhasil dimulai ulang!**\n\n• **Daftar admin** telah **diperbarui**""",
+    await message.reply_text("""➠ Bot **berhasil dimulai ulang!**\n\n➠ **Daftar admin** telah **diperbarui**""",
       reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "『Grup Support』", url=f"https://t.me/SadRoomsChat"
+                        "『Grup Support』", url=f"https://t.me/Gcserendipity"
                     ),
                     InlineKeyboardButton(
                         "『Created By』", url=f"https://t.me/XFLSkyzo"
