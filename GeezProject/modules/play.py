@@ -1024,10 +1024,10 @@ async def lol_cb(b, cb):
     keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("🛰️ Groups", url="https://t.me/SadRoomsChat"),
-                    InlineKeyboardButton("📸 Channel", url="https://t.me/SadRoomsInfo"),
+                    InlineKeyboardButton("🦊 Group", url="https://t.me/Gcserendipity"),
+                    InlineKeyboardButton("🛍️ Channel", url="https://t.me/SadRoomsInfo"),
                 ],
-                [InlineKeyboardButton(text="🗑 Close", callback_data="cls")],
+                [InlineKeyboardButton(text="🗑 Close Menu", callback_data="cls")],
             ]
         )
     requested_by = useer_name
