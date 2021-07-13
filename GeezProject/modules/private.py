@@ -34,11 +34,14 @@ Saya Memiliki Banyak Fitur Seperti :
 ➠ Memutar Musik.
 ➠ Mendownload Lagu.
 ➠ Mencari Lagu.
-➠ Mendownload Lagu.
+➠ Mendownload Video Lagu.
 ➠ Tekan » /help « Untuk Fitur Lainnya.
 
-🎉 Thanks To : {OWNER}
-🎊 And Support : @GcSerendipity
+🦁 Thanks To : {OWNER}
+🦊 Contributors
+- @YaguraGans
+- @SadBoyIndo
+- @ZyansGans
 
 Ingin Menambahkan Saya Ke Grup Anda? Tambahkan Saya Ke Group Anda!
 </b>""",
@@ -58,7 +61,7 @@ Ingin Menambahkan Saya Ke Grup Anda? Tambahkan Saya Ke Group Anda!
                         "🎊 Groups Support", url=f"https://t.me/{SUPPORT_GROUP}")
                 ],[
                     InlineKeyboardButton(
-                        "❖ Owner Bot ❖", url=f"https://t.me/XFLSkyzo")
+                        "💸 Donasi?", url=f"https://t.me/XFLSkyzo")
                 ],[
                     InlineKeyboardButton(
                         "🎍 Groups Promote 🎍", url=f"https://t.me/Gcserendipity")
@@ -103,7 +106,7 @@ def map(pos):
             [InlineKeyboardButton("⭐ Tambahkan Saya Ke Grup ⭐", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")],
             [InlineKeyboardButton(text = '🛍️ Channel Updates', url=f"https://t.me/{UPDATES_CHANNEL}"),
              InlineKeyboardButton(text = '📸 Group Support', url=f"https://t.me/{SUPPORT_GROUP}")],
-            [InlineKeyboardButton(text = '🎍 Group Promote', url=f"https://t.me/gcserendipity")],
+            [InlineKeyboardButton(text = '🎍 Group Promote 🎍', url=f"https://t.me/gcserendipity")],
             [InlineKeyboardButton(text = '«', callback_data = f"help+{pos-1}")]
         ]
     else:
