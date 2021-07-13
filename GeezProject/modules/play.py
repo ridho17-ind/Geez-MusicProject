@@ -623,7 +623,7 @@ async def play(_, message: Message):
                         InlineKeyboardButton("『4』", callback_data=f'plll 3|{query}|{user_id}'),
                         InlineKeyboardButton("『5』", callback_data=f'plll 4|{query}|{user_id}'),
                     ],
-                    [InlineKeyboardButton(text="『CLOSE』", callback_data="cls")],
+                    [InlineKeyboardButton(text="『Close Menu』", callback_data="cls")],
                 ]
             )       
             await lel.edit(toxxt,reply_markup=koyboard,disable_web_page_preview=True)
@@ -929,7 +929,7 @@ async def deezer(client: Client, message_: Message):
     
     keyboard = InlineKeyboardMarkup(
         [
-            [InlineKeyboardButton(text="⛑ Channel", url="https://t.me/GeezProjects")],
+            [InlineKeyboardButton(text="⛑ Channel", url="https://t.me/SadRoomsInfo")],
         ]
     )
     file_path = await convert(wget.download(url))
@@ -984,13 +984,13 @@ async def lol_cb(b, cb):
     try:
         x,query,useer_id = typed_.split("|")      
     except:
-        await cb.message.edit("Lagu Tidak ditemukan")
+        await cb.message.edit("Lagu Tidak Ditemukan")
         return
     useer_id = int(useer_id)
     if cb.from_user.id != useer_id:
         await cb.answer("Anda bukan orang yang meminta untuk memutar lagu!", show_alert=True)
         return
-    await cb.message.edit("**Processing**")
+    await cb.message.edit("**Processing Sound**")
     x=int(x)
     try:
         useer_name = cb.message.reply_to_message.from_user.first_name
