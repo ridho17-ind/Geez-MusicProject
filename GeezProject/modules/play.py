@@ -794,10 +794,11 @@ async def ytplay(_, message: Message):
     keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("📌 Groups", url="https://t.me/SadRoomsChat"),
-                    InlineKeyboardButton("📸 Channel", url="https://t.me/SadRoomsInfo"),
+                    InlineKeyboardButton("Groups", url="https://t.me/SadRoomsChat"),
+                    InlineKeyboardButton("Owner", url="https://t.me/YaguraGans"),
+                    InlineKeyboardButton("Channel", url="https://t.me/SadRoomsInfo"),
                 ],
-                [InlineKeyboardButton(text="🗑 Close", callback_data="cls")],
+                [InlineKeyboardButton(text="Close Menu Bot", callback_data="cls")],
             ]
         )
     requested_by = message.from_user.first_name
@@ -1024,11 +1025,11 @@ async def lol_cb(b, cb):
     keyboard = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("🦊 Group", url="https://t.me/Gcserendipity"),
-                    InlineKeyboardButton("🦁 Owner", url="https://t.me/XFLSkyzo"),
-                    InlineKeyboardButton("🛍️ Channel", url="https://t.me/SadRoomsInfo"),
+                    InlineKeyboardButton("Group", url="https://t.me/Gcserendipity"),
+                    InlineKeyboardButton("Owner", url="https://t.me/XFLSkyzo"),
+                    InlineKeyboardButton("Channel", url="https://t.me/SadRoomsInfo"),
                 ],
-                [InlineKeyboardButton(text="🗑 Close Menu", callback_data="cls")],
+                [InlineKeyboardButton(text="Close Menu Bot", callback_data="cls")],
             ]
         )
     requested_by = useer_name
