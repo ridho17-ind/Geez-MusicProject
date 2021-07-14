@@ -53,15 +53,14 @@ Ingin Menambahkan Saya Ke Grup Anda? Tambahkan Saya Ke Group Anda!
             [
                 [
                     InlineKeyboardButton(
-                        "⭐ Tambahkan Saya Ke Grup ⭐", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")],
+                        "⭐ Add Me To Your Groups ⭐", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")],
                 [
                     InlineKeyboardButton(
-                        "🛍️ Channel Updates", url=f"https://t.me/{UPDATES_CHANNEL}"), 
+                        "Updates", url=f"https://t.me/{UPDATES_CHANNEL}"), 
                     InlineKeyboardButton(
-                        "🎊 Groups Support", url=f"https://t.me/{SUPPORT_GROUP}")
-                ],[
+                        "Support", url=f"https://t.me/{SUPPORT_GROUP}")
                     InlineKeyboardButton(
-                        "💸 Donasi?", url=f"https://t.me/XFLSkyzo")
+                        "Donasi", url=f"https://t.me/XFLSkyzo")
                 ],[
                     InlineKeyboardButton(
                         "🎍 Groups Promote 🎍", url=f"https://t.me/Gcserendipity")
@@ -103,9 +102,10 @@ def map(pos):
     elif(pos==len(tr.HELP_MSG)-1):
         url = f"https://t.me/{SUPPORT_GROUP}"
         button = [
-            [InlineKeyboardButton("⭐ Tambahkan Saya Ke Grup ⭐", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")],
-            [InlineKeyboardButton(text = '🛍️ Channel Updates', url=f"https://t.me/{UPDATES_CHANNEL}"),
-             InlineKeyboardButton(text = '📸 Group Support', url=f"https://t.me/{SUPPORT_GROUP}")],
+            [InlineKeyboardButton("⭐ Add Me To Your Groups ⭐", url=f"https://t.me/{BOT_USERNAME}?startgroup=true")],
+            [InlineKeyboardButton(text = 'Updates', url=f"https://t.me/{UPDATES_CHANNEL}"),
+             InlineKeyboardButton(text = 'Support', url=f"https://t.me/{SUPPORT_GROUP}")],
+             InlineKeyboardButton(text = 'Donasi', url=f"https://t.me/XFLSkyzo")],
             [InlineKeyboardButton(text = '🎍 Group Promote 🎍', url=f"https://t.me/gcserendipity")],
             [InlineKeyboardButton(text = '«', callback_data = f"help+{pos-1}")]
         ]
@@ -173,7 +173,7 @@ async def reload(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "『Grup Support』", url=f"https://t.me/Gcserendipity"
+                        "『Channel』", url=f"https://t.me/SadRoomsInfo"
                     ),
                     InlineKeyboardButton(
                         "『Created By』", url=f"https://t.me/YaguraGans"
