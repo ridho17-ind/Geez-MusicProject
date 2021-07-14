@@ -59,7 +59,7 @@ Ingin Menambahkan Saya Ke Grup Anda? Tambahkan Saya Ke Group Anda!
                         "Updates", url=f"https://t.me/{UPDATES_CHANNEL}"), 
                     InlineKeyboardButton(
                         "Support", url=f"https://t.me/{SUPPORT_GROUP}")
-                    InlineKeyboardButton("Donasi", url=f"https://t.me/XFLSkyzo")
+                    InlineKeyboardButton("Donasi", url="https://t.me/XFLSkyzo")
                 ],[
                     InlineKeyboardButton(
                         "🎍 Groups Promote 🎍", url=f"https://t.me/Gcserendipity")
