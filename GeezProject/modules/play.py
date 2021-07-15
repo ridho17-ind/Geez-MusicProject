@@ -393,15 +393,15 @@ async def m_cb(b, cb):
         marr = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton("⏹", "leave"),
-                    InlineKeyboardButton("⏸", "puse"),
-                    InlineKeyboardButton("▶️", "resume"),
-                    InlineKeyboardButton("⏭", "skip"),
+                    InlineKeyboardButton("ⓧ", "leave"),
+                    InlineKeyboardButton("◙", "pause"),
+                    InlineKeyboardButton("»", "resume"),
+                    InlineKeyboardButton("➠", "skip"),
                 ],
                 [
-                    InlineKeyboardButton("📖 Playlist", "playlist"),
+                    InlineKeyboardButton("Playlist", "playlist"),
                 ],
-                [InlineKeyboardButton("❌ Close", "cls")],
+                [InlineKeyboardButton("Close", "cls")],
             ]
         )
         await cb.message.edit(stats, reply_markup=marr)
@@ -792,15 +792,19 @@ async def ytplay(_, message: Message):
     dlurl=url
     dlurl=dlurl.replace("youtube","youtubepp")
     keyboard = InlineKeyboardMarkup(
+        [
             [
-                [
-                    InlineKeyboardButton("Groups", url="https://t.me/SadRoomsChat"),
-                    InlineKeyboardButton("Owner", url="https://t.me/YaguraGans"),
-                    InlineKeyboardButton("Channel", url="https://t.me/SadRoomsInfo"),
-                ],
-                [InlineKeyboardButton(text="Close Menu Bot", callback_data="cls")],
-            ]
-        )
+                InlineKeyboardButton("Contributor", url="https://t.me/Sadroomsinfo/83"),
+                InlineKeyboardButton("Menu", callback_data="menu"),
+            ],
+            [
+                InlineKeyboardButton("Update", url="https://t.me/SadRoomsinfo"),
+                InlineKeyboardButton(text="Unduh", url=f"{dlurl}"),
+                InlineKeyboardButton("Grup", url="https://t.me/SadRoomsChat"),
+            ],
+            [InlineKeyboardButton(text="Close Menu", callback_data="cls")],
+        ]
+    )
     requested_by = message.from_user.first_name
     await generate_cover(requested_by, title, views, duration, thumbnail)
     file_path = await convert(youtube.download(url))
@@ -1023,15 +1027,19 @@ async def lol_cb(b, cb):
     dlurl=url
     dlurl=dlurl.replace("youtube","youtubepp")
     keyboard = InlineKeyboardMarkup(
+        [
             [
-                [
-                    InlineKeyboardButton("Group", url="https://t.me/Gcserendipity"),
-                    InlineKeyboardButton("Owner", url="https://t.me/XFLSkyzo"),
-                    InlineKeyboardButton("Channel", url="https://t.me/SadRoomsInfo"),
-                ],
-                [InlineKeyboardButton(text="Close Menu Bot", callback_data="cls")],
-            ]
-        )
+                InlineKeyboardButton("Contributor", url="https://t.me/Sadroomsinfo/83"),
+                InlineKeyboardButton("Menu", callback_data="menu"),
+            ],
+            [
+                InlineKeyboardButton("Update", url="https://t.me/SadRoomsinfo"),
+                InlineKeyboardButton(text="Unduh", url=f"{dlurl}"),
+                InlineKeyboardButton("Grup", url="https://t.me/SadRoomsChat"),
+            ],
+            [InlineKeyboardButton(text="Close Menu", callback_data="cls")],
+        ]
+    )
     requested_by = useer_name
     await generate_cover(requested_by, title, views, duration, thumbnail)
     file_path = await convert(youtube.download(url))  
